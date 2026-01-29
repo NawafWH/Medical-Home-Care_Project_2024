@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        background-image: url('medical-background.jpeg');
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .2);
+        padding: 30px 40px;
+        border-radius: 10px;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        backdrop-filter: blur(20px); /* Blur the background */
+        width: 300px;
+        max-width: 100%;
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: white; /* White text color */
+    }
+    label {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+        color: white; /* White text color */
+    }
+    input[type="date"],
+    input[type="time"],
+    input[type="submit"],
+    select {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 20px; /* Curved border */
+        box-sizing: border-box;
+        background-color: rgba(53, 14, 61, 0.596); /* Semi-transparent white background color */
+        backdrop-filter: blur(40px); /* Blur the background behind the fields */
+        color: white; /* White text color */
+        font-size: 14px;
+    }
+    input[type="submit"] {
+        background-color: #fff; /* White background color */
+        color: #6c3082; /* Purple text color */
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block; /* Display as block to center */
+        margin: 0 auto; /* Center horizontally */
+        max-width: 200px; /* Set a maximum width if needed */
+    }
+    input[type="submit"]:hover {
+        background-color: #eee; /* Lighter background color on hover */
+    }
+</style>
+</head>
+<body>
+
+
+<div class="container">
+    <h1>Book an Appointment</h1>
+    <form action="booking.php" method="post">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required>
+        <label for="hospital">Select Hospital:</label>
+        <select id="hospital" name="hospital" required>
+            <option value="King Faisal Specialist Hospital & Research Centre">King Faisal Specialist Hospital & Research Centre</option>
+            <option value="King Khalid University Hospital">King Khalid University Hospital</option>
+            <option value="King Saud Medical City">King Saud Medical City</option>
+            <option value="Riyadh Care Hospital">Riyadh Care Hospital</option>
+            <option value="Al Hammadi Hospital">Al Hammadi Hospital</option>
+            <option value="Dr. Sulaiman Al Habib Hospital">Dr. Sulaiman Al Habib Hospital</option>
+            <option value="King Abdulaziz Medical City">King Abdulaziz Medical City</option>
+            <option value="Al Mouwasat Hospital">Al Mouwasat Hospital</option>
+            <option value="Specialized Medical Center">Specialized Medical Center</option>
+            <option value="Al Mashfa Hospital">Al Mashfa Hospital</option>
+        </select>
+        <input type="submit" name="book" value="Book Appointment">
+    </form>
+</div>
+</body>
+</html>

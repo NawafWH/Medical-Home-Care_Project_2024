@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Website Login</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css"> <!-- Boxicons CSS -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('medical-background.jpeg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 420px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .2);
+        padding: 30px 40px;
+        border-radius: 10px;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        backdrop-filter: blur(20px); /* Blur the background */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: white; /* White text color */
+    }
+    input[type="text"],
+    input[type="password"] {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 40px 10px 10px; /* Larger padding */
+        height: 40px; /* Larger height */
+        border: none; /* No border */
+        border-radius: 20px; /* Curved border */
+        box-sizing: border-box;
+        background-color: rgba(53, 14, 61, 0.596); /* Semi-transparent white background color */
+        backdrop-filter: blur(40px); /* Blur the background behind the fields */
+        color: white; /* White text color */
+    }
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+        color: white; /* Placeholder text color */
+    }
+    input[type="submit"] {
+        background-color: #fff; /* White background color */
+        color: #6c3082; /* Purple text color */
+        border: none;
+        padding: 10px;
+        border-radius: 300px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block; /* Display as block to center */
+        margin: 0 auto; /* Center horizontally */
+        width: 100%; /* Set width to 100% */
+        max-width: 200px; /* Set a maximum width if needed */
+    }
+    input[type="submit"]:hover {
+        background-color: #eee; /* Lighter background color on hover */
+    }
+    .register-link {
+        text-align: center;
+        margin-top: 20px;
+        color: white; /* White text color */
+    }
+    .register-link a {
+        color: white; /* White text color */
+        text-decoration: none;
+    }
+    /* Style for icons */
+    input[type="text"] + i,
+    input[type="password"] + i {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ffffff; /* Icon color */
+        pointer-events: none; /* Prevent icon from being clicked */
+    }
+    /* Specific styles for icons inside input fields */
+    input[type="text"] + i.bxs-user,
+    input[type="password"] + i.bxs-lock-alt {
+        right: 10px; /* Adjust the position for the icons */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Medical Website sign in</h2>
+    <form action="#" method="post">
+        <div style="position: relative;">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div style="position: relative;">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <input type="submit" value="Sign in">
+    </form>
+    <div class="register-link">
+        Don't have an account? <a href="register.html">Register here</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('medical-background.jpeg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 420px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .2);
+        padding: 30px 40px;
+        border-radius: 10px;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        backdrop-filter: blur(20px); /* Blur the background */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: white; /* White text color */
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px; /* Larger padding */
+        height: 40px; /* Larger height */
+        border: none; /* No border */
+        border-radius: 20px; /* Curved border */
+        box-sizing: border-box;
+        background-color: rgba(53, 14, 61, 0.596); /* Semi-transparent white background color */
+        backdrop-filter: blur(40px); /* Blur the background behind the fields */
+        color: white; /* White text color */
+    }
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder,
+    input[type="email"]::placeholder {
+        color: white; /* Placeholder text color */
+    }
+    input[type="submit"] {
+        background-color: #fff; /* White background color */
+        color: #6c3082; /* Purple text color */
+        border: none;
+        padding: 10px;
+        border-radius: 300px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block; /* Display as block to center */
+        margin: 0 auto; /* Center horizontally */
+        width: 100%; /* Set width to 100% */
+        max-width: 200px; /* Set a maximum width if needed */
+    }
+    input[type="submit"]:hover {
+        background-color: #eee; /* Lighter background color on hover */
+    }
+    .login-link {
+        text-align: center;
+        margin-top: 20px;
+        color: white; /* White text color */
+    }
+    .login-link a {
+        color: white; /* White text color */
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Register</h2>
+    <form action="#" method="post">
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+        <input type="text" id="uname" name="uname" placeholder="Username" required>
+        <input type="password" id="pass" name="pass" placeholder="Password" required>
+        <input type="submit" value="Register">
+    </form>
+    <div class="login-link">
+        Already have an account? <a href="sign-in.html">Sign in here</a>
+    </div>
+</div>
+</body>
+</html>
