@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Appointments</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url('medical-background.jpeg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container {
+        width: 90%;
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, .2);
+        padding: 30px;
+        border-radius: 15px;
+        color: #fff;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+        text-align: center;
+    }
+    h2 { margin-bottom: 25px; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    th { background: rgba(255, 255, 255, 0.1); color: #ffd700; }
+    .status {
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 12px;
+        background: #4CAF50;
+    }
+    .btn-back {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 30px;
+        background: #fff;
+        color: #6c3082;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🗓️ My Appointments</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Service/Hospital</th>
+                <th>Date & Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="appointments-list">
+            <tr>
+                <td>King Faisal Hospital</td>
+                <td>2026-02-10 | 10:00 AM</td>
+                <td><span class="status">Confirmed</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="index.html" class="btn-back">Back to Home</a>
+</div>
+
+<script>
+    // حركة ذكية: جلب الموعد الأخير إذا كان موجود في الرابط (للتمثيل فقط)
+    const params = new URLSearchParams(window.location.search);
+    const date = params.get('date');
+    const time = params.get('time');
+    
+    if(date && time) {
+        const tableBody = document.getElementById('appointments-list');
+        const newRow = `<tr>
+            <td>Home Medical Visit</td>
+            <td>${date} | ${time}</td>
+            <td><span class="status" style="background: #2196F3;">New</span></td>
+        </tr>`;
+        tableBody.innerHTML += newRow;
+    }
+</script>
+
+</body>
+</html>
