@@ -3,8 +3,9 @@ A Digital Healthcare Solution for the Elderly
 🌟 About the Project
 This project is a modern web-based platform designed to simplify the process of booking home medical visits for elderly patients. It provides a seamless interface between patients and healthcare providers, ensuring comfort and professional care at home.
 
-🚀 Live Demo
-You can view the live website here: Check out the Live Website
+## 🚀 Live Demo
+You can view the live website here: 
+**[Check out the Live Website](https://nawafwh.github.io/Medical-Home-Care_Project_2024/)**
 
 ✨ Key Features
 Modern UI/UX: High-quality design using glassmorphism effects (backdrop-filter: blur).
