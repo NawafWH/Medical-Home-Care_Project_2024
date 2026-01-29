@@ -14,12 +14,19 @@ You can view the live website here:
 
 
 ✨ Key Features
-Modern UI/UX: High-quality design using glassmorphism effects (backdrop-filter: blur).
-Registration System: User-friendly sign-up and sign-in interfaces.
-Hospital Integration: Options to book from major hospitals like King Faisal Specialist Hospital and Al-Habib.
-Responsive Design: Fully compatible with different screen sizes.
+
+1-Modern UI/UX: High-quality design using glassmorphism effects (backdrop-filter: blur).
+
+2-Registration System: User-friendly sign-up and sign-in interfaces.
+
+3-Hospital Integration: Options to book from major hospitals like King Faisal Specialist Hospital and Al-Habib.
+
+4-Responsive Design: Fully compatible with different screen sizes.
 
 🛠️ Built With
-HTML5: For the structured content.
-CSS3: For advanced styling and layouts.
-GitHub Pages: Used for hosting and deployment.
+
+1-HTML5: For the structured content.
+
+2-CSS3: For advanced styling and layouts.
+
+3-GitHub Pages: Used for hosting and deployment.
