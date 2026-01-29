@@ -8,111 +8,123 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #8a2be2; /* Purple background color */
+        background-color: #8a2be2;
         background-image: url('medical-background.jpeg');
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
         margin: 0;
         padding: 0;
-    }
-    .overlay {
-        background-color: rgba(138, 43, 226, 0.7); /* Dark purple overlay to make text readable */
-        padding: 20px;
     }
     .container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 50px auto;
-        background-color: rgba(255, 255, 255, 0.7); /* Faded white background color */
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.8); /* زيادة الشفافية قليلاً للجمال */
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        padding-bottom: 40px;
+    }
+    .overlay {
+        background-color: rgba(138, 43, 226, 0.8);
+        padding: 40px 20px;
+        color: white;
         text-align: center;
     }
-    h1 {
-        font-size: 36px;
-        color: #333;
-        margin-bottom: 20px;
+    h1 { margin: 0; font-size: 32px; }
+    
+    /* تنسيق شبكة الخدمات */
+    .services-grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
     }
-    p {
-        font-size: 18px;
-        color: #333;
-        margin-bottom: 30px;
+    .service-card {
+        background: white;
+        width: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
     }
-    .section {
-        margin-bottom: 40px;
-        padding: 0 20px;
-        text-align: left;
+    .service-card:hover { transform: translateY(-5px); }
+    .service-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
     }
-    .section h2 {
-        font-size: 24px;
-        color: #333;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-    }
-    .section p {
-        font-size: 16px;
-        color: #333;
-        line-height: 1.6;
-    }
-    .team-members {
-        margin-top: 30px;
-    }
-    .team-members h2 {
-        font-size: 24px;
-        color: #333;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-    }
+    .service-card h3 { font-size: 18px; margin: 10px; color: #8a2be2; }
+    .service-card p { font-size: 14px; padding: 0 10px 15px; margin: 0; color: #555; }
+
+    .section { padding: 20px; text-align: left; }
     .team-members ul {
-        list-style-type: none;
+        list-style: none;
         padding: 0;
-        margin: 0;
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        gap: 20px;
     }
-    .team-members li {
-        font-size: 18px;
-        color: #333;
-        margin-right: 20px;
-        margin-bottom: 10px;
-    }
-    .register-link {
-        margin-top: 20px;
-    }
+    .register-link { margin-top: 30px; text-align: center; }
     .register-link a {
         color: #fff;
         text-decoration: none;
-        background-color: rgba(138, 43, 226, 0.5); /* Faded purple background color */
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
+        background-color: #8a2be2;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-weight: bold;
+        display: inline-block;
+        transition: 0.3s;
     }
-    .register-link a:hover {
-        background-color: rgba(138, 43, 226, 0.7); /* Darker faded purple background color on hover */
-    }
+    .register-link a:hover { background-color: #6a1b9a; }
 </style>
 </head>
 <body>
 <div class="container">
     <div class="overlay">
-        <h1>Welcome to the Medical Services Project</h1>
-        <p>This website provides medical services to elderly people at their homes by booking appointments with doctors.</p>
+        <h1>Welcome to Home Care Medical</h1>
+        <p>Professional healthcare delivered to your doorstep.</p>
     </div>
+
+    <div class="section">
+        <h2 style="text-align:center;">Our Specialized Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="elderly-care.jpg" alt="General Checkup">
+                <h3>General Checkup</h3>
+                <p>Routine medical exams for your peace of mind.</p>
+            </div>
+            <div class="service-card">
+                <img src="elderly-care2.jpg" alt="Elderly Care">
+                <h3>Elderly Care</h3>
+                <p>Compassionate care tailored for seniors.</p>
+            </div>
+            <div class="service-card">
+                <img src="elderly-care3.jpg" alt="Physiotherapy">
+                <h3>Physiotherapy</h3>
+                <p>Home-based sessions for mobility recovery.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="section">
         <h2>About the Project</h2>
-        <p>The goal of this project is to make healthcare more accessible and convenient for elderly people who may have difficulty visiting traditional healthcare facilities. By allowing them to book appointments with doctors who can visit their homes, we aim to improve their overall quality of life.</p>
+        <p>The goal of this project is to make healthcare more accessible for elderly people. By allowing them to book home visits, we aim to improve their quality of life.</p>
     </div>
-    <div class="section">
+
+    <div class="section" style="text-align: center;">
         <h2>Meet the Team</h2>
         <ul class="team-members">
-            <li>Nawaf</li>
-            <li>Ibrahim</li>
-            <li>Abdulrahman</li>
+            <li><strong>Nawaf</strong></li>
+            <li><strong>Ibrahim</strong></li>
+            <li><strong>Abdulrahman</strong></li>
         </ul>
     </div>
+
     <div class="register-link">
-        <a href="register.html">Register Now</a>
-        <a href="my-appointments.html" style="color: white; margin-left: 15px; text-decoration: none;">My Appointments</a>
+        <a href="register.html">Get Started / Register</a>
+        <a href="my-appointments.html" style="background-color: #ffd700; color: #000; margin-left: 10px;">My Appointments</a>
     </div>
 </div>
 </body>
