@@ -8,8 +8,9 @@
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f8f9fa;
         background-image: url('medical-background.jpeg');
+        background-size: cover;
+        background-position: center;
         margin: 0;
         padding: 0;
         display: flex;
@@ -18,38 +19,79 @@
         height: 100vh;
     }
     .container {
+        width: 350px;
         background: transparent;
         border: 2px solid rgba(255, 255, 255, .2);
-        padding: 30px 40px;
-        border-radius: 10px;
+        padding: 40px;
+        border-radius: 15px;
         color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        backdrop-filter: blur(20px); /* Blur the background */
-        width: 300px;
-        max-width: 100%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+        backdrop-filter: blur(20px); /* تأثير الضبابية */
         text-align: center;
     }
     h1 {
-        text-align: center;
         margin-bottom: 20px;
-        color: white; /* White text color */
+        color: #4CAF50; /* لون أخضر ليدل على النجاح */
+        font-size: 28px;
     }
     p {
-        font-size: 16px;
-        margin-bottom: 10px;
-        color: white; /* White text color */
+        font-size: 18px;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    .data-box {
+        background: rgba(53, 14, 61, 0.4); /* نفس لون حقول الإدخال */
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px 0;
     }
     strong {
+        color: #ffd700; /* لون ذهبي للبيانات المهمة */
         font-weight: bold;
+    }
+    .btn-home {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #fff;
+        color: #6c3082;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+    .btn-home:hover {
+        background-color: #eee;
+        transform: scale(1.05);
     }
 </style>
 </head>
 <body>
+
 <div class="container">
-    <h1>Appointment Booked</h1>
-    <p>Your appointment has been successfully booked for:</p>
-    <p>Date: <strong id="date"></strong></p>
-    <p>Time: <strong id="time"></strong></p>
+    <h1>✔ Confirmed!</h1>
+    <p>Your appointment has been successfully booked.</p>
+    
+    <div class="data-box">
+        <p>Date: <strong id="res-date">Not set</strong></p>
+        <p>Time: <strong id="res-time">Not set</strong></p>
+    </div>
+
+    <p style="font-size: 14px; opacity: 0.8;">The hospital will contact you shortly for more details.</p>
+    
+    <a href="index.html" class="btn-home">Back to Home</a>
 </div>
+
+<script>
+    // هذا الكود يسحب التاريخ والوقت من الرابط ويعرضهم في الصفحة
+    const urlParams = new URLSearchParams(window.location.search);
+    const bookingDate = urlParams.get('date');
+    const bookingTime = urlParams.get('time');
+
+    if (bookingDate) document.getElementById('res-date').innerText = bookingDate;
+    if (bookingTime) document.getElementById('res-time').innerText = bookingTime;
+</script>
+
 </body>
 </html>
