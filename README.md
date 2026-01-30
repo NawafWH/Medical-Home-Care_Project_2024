@@ -27,4 +27,7 @@
 - `my-appointments.html` - Personal appointment tracker.
 
 ---
-*Developed by **Nawaf Alhoqail** - 2024*
+### 👥 Credits
+**Project Team:** Nawaf Alhoqail, Ibrahim, & Abdulrahman.
+
+*Developed & Maintained by **Nawaf Alhoqail** - 2024*
