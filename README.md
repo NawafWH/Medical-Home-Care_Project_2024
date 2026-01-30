@@ -1,7 +1,11 @@
 # 🏥 HomeCare Medical
 ### *Professional Healthcare at Your Doorstep*
 
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://nawafwh.github.io/Medical-Home-Care_Project_2024/)
+## 🌐 Official Website
+**You can access the full live platform here:**
+👉 **[Launch HomeCare Medical Portal](https://nawafwh.github.io/Medical-Home-Care_Project_2024/)**
+
+---
 
 ## 📝 Overview
 **HomeCare Medical** is a modern web platform designed to provide high-quality medical services for the elderly. Our mission is to bridge the gap between healthcare facilities and home comfort through a seamless digital booking experience.
@@ -23,4 +27,4 @@
 - `my-appointments.html` - Personal appointment tracker.
 
 ---
-*Developed by Nawaf - 2026*
+*Developed by **Nawaf Alhoqail** - 2024*
